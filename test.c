@@ -39,14 +39,14 @@ int main() {
 	copyIntList(&save, &list);
 	quickCount = quickSort(&list);
 	copyIntList(&save, &list);
-	/*mergeCount = mergeSort(&list);*/
+	mergeCount = mergeSort(&list);
 
 	displayIntList(&list);
 
 	printf("bubble sort: \t%d\n", bubbleCount);
 	printf("selection sort: \t%d\n", selectionCount);
 	printf("quick sort: \t%d\n", quickCount);
-	/*printf("merge sort: \t%d\n", mergeCount);*/
+	printf("merge sort: \t%d\n", mergeCount);
 	return EXIT_SUCCESS;
 }
 
