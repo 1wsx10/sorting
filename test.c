@@ -13,7 +13,7 @@
 int main() {
 	IntList list, save;
 	/*int i;*/
-	int bubbleCount, selectionCount, quickCount, mergeCount;
+	int bubbleCount, selectionCount, quickCount;
 
 	srand((unsigned) time(NULL));
 
