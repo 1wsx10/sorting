@@ -3,7 +3,6 @@
 
 #define INTLIST_SIZE 20
 #define INTLIST_RANGE 200
-#define DFASDFTEST 6
 
 typedef struct intList {
 	int list[INTLIST_SIZE];
