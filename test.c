@@ -13,7 +13,7 @@
 int main() {
 	IntList list, save;
 	/*int i;*/
-	int bubbleCount, selectionCount, quickCount;
+	int bubbleCount, selectionCount, quickCount, mergeCount;
 
 	srand((unsigned) time(NULL));
 
@@ -49,24 +49,3 @@ int main() {
 	printf("merge sort: \t%d\n", mergeCount);
 	return EXIT_SUCCESS;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

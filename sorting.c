@@ -99,8 +99,15 @@ typedef struct iListArr {
 
 IListArr createIListArr() {
 	IListArr list;
-	memset(&list, 0, sizeof(IListArr));
 	return list;
+}
+
+void initIListArr(IListArr * list) {
+	int i;
+	for(i = 0; i < INTLIST_SIZE; i++) {
+		memset(&list->list[i], 0, sizeof(IntList));
+	}
+	memset(&list, 0, sizeof(IListArr));
 }
 
 void splitList(IntList * list, IntList * dest) {
@@ -132,30 +139,14 @@ int r_divide(IListArr* list) {
 int mergeSort(IntList * list) {
 	int count = 1;
 	IListArr listArr = createIListArr();
+	initIListArr(&listArr);
 
+	printf("starting merge sort\n");
 	memcpy((void*) &listArr.list[0], (void*) &list, sizeof(IntList));
+	printf("list copied\n");
 	listArr.size = 1;
 
 	count += r_divide(&listArr);
 	return count;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
