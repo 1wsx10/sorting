@@ -9,7 +9,7 @@ CFLAGS += -std=c89
 LFLAGS  =
 DEPS =
 OBJ = IntList.o sorting.o test.o
-OUT_EXE = sort
+OUT_EXE = a.out
 
 
 all:$(OUT_EXE)
