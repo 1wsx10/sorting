@@ -14,7 +14,7 @@ int main() {
 	IntList list, save;
 	/*int i;*/
 	int bubbleCount, selectionCount, quickCount;
-	time_t t1, t2;
+	clock_t t1;
 	int bubbleTime, selectionTime, quickTime;
 
 	srand((unsigned) time(NULL));
@@ -35,23 +35,23 @@ int main() {
 	fillIntList(&list);
 	copyIntList(&list, &save);
 
-	time(&t1);
+	t1 = clock();
 	bubbleCount = bubbleSort(&list);
-	bubbleTime = (int)(time(&t2) - t1);
+	bubbleTime = (clock() - t1);
 	copyIntList(&save, &list);
-	time(&t1);
+	t1 = clock();
 	selectionCount = selectionSort(&list);
-	selectionTime = (int)(time(&t2) - t1);
+	selectionTime = (clock() - t1);
 	copyIntList(&save, &list);
-	time(&t1);
+	t1 = clock();
 	quickCount = quickSort(&list);
-	quickTime = (int)(time(&t2) - t1);
+	quickTime = (clock() - t1);
 
 	displayIntList(&list);
 
-	printf("bubble sort: \t%d\t\t%ds\n", bubbleCount, bubbleTime);
-	printf("selection sort: \t%d\t%ds\n", selectionCount, selectionTime);
-	printf("quick sort: \t%d\t\t%ds\n", quickCount, quickTime);
+	printf("bubble sort: \t		%d\t%d\n", bubbleCount, bubbleTime);
+	printf("selection sort: \t	%d\t%d\n", selectionCount, selectionTime);
+	printf("quick sort: \t		%d\t%d\n", quickCount, quickTime);
 	return EXIT_SUCCESS;
 }
 

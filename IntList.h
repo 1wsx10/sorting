@@ -1,7 +1,7 @@
 #ifndef INTLIST_H
 #define INTLIST_H
 
-#define INTLIST_SIZE 20
+#define INTLIST_SIZE 9999
 #define INTLIST_RANGE 200
 
 typedef struct intList {
