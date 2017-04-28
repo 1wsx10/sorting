@@ -103,11 +103,14 @@ IListArr createIListArr() {
 }
 
 void initIListArr(IListArr * list) {
+	/*
 	int i;
 	for(i = 0; i < INTLIST_SIZE; i++) {
-		memset(&list->list[i], 0, sizeof(IntList));
+		memset(&list->list[i], '\0', sizeof(IntList));
 	}
-	memset(&list, 0, sizeof(IListArr));
+	*/
+	memset(list->list, '\0', sizeof(IntList)*INTLIST_SIZE);
+	memset(&list, '\0', sizeof(IListArr));
 }
 
 void splitList(IntList * list, IntList * dest) {
